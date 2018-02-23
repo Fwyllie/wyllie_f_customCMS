@@ -1,5 +1,5 @@
 <?php
-	
+
 	function getAll($tbl) {
 		include('connect.php');
 		$queryAll = "SELECT * FROM {$tbl}";
@@ -20,7 +20,7 @@
 		if($runSingle){
 			return $runSingle;
 		}else{
-			$error = "There was a problem accessing this information.  Sorry about your luck ;)";
+			$error = "Houston, we have a problem acessing this information.";
 			return $error;
 		}
 		mysqli_close($link);
@@ -30,7 +30,6 @@
 		include('connect.php');
 
 		$filterQuery = "SELECT * FROM {$tbl}, {$tbl2}, {$tbl3} WHERE {$tbl}.{$col} = {$tbl3}.{$col} AND {$tbl2}.{$col2} = {$tbl3}.{$col2} AND {$tbl2}.{$col3}='{$filter}'";
-		//echo $filterQuery;
 		$runQuery = mysqli_query($link, $filterQuery);
 		if($runQuery){
 			return $runQuery;

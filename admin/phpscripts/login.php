@@ -4,9 +4,10 @@
 		require_once('connect.php');
 		$username = mysqli_real_escape_string($link, $username);
 		$password = mysqli_real_escape_string($link, $password);
-		$loginstring = "SELECT * FROM tbl_user WHERE user_name='{$username}' AND user_pass='{$password}'";
+		$crypted = md5($password);
+		$loginstring = "SELECT * FROM tbl_user WHERE user_name='{$username}' AND user_pass='{$crypted}'";
 		$user_set = mysqli_query($link, $loginstring);
-		//echo mysqli_num_rows($user_set);
+
 		if(mysqli_num_rows($user_set)){
 			$founduser = mysqli_fetch_array($user_set, MYSQLI_ASSOC);
 			$id = $founduser['user_id'];

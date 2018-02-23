@@ -1,9 +1,7 @@
 <?php
 	require_once('phpscripts/config.php');
 	$ip = $_SERVER['REMOTE_ADDR'];
-	//echo $ip;
 	if(isset($_POST['submit'])){
-		//echo "Works";
 		$username = trim($_POST['username']);
 		$password = trim($_POST['password']);
 		if($username !== "" && $password !== ""){

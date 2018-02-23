@@ -12,8 +12,7 @@
 			$message = "Please select a user level.";
 		}else{
 			$sendMail = sendMessage($email, $username, $password, $link);
-			// $result = createUser($fname, $username, $password, $email, $lvllist);
-			// $message = $result;
+		 	$result = createUser($fname, $username, $password, $email, $lvllist);
 		}
 	}
 ?>
