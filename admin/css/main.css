@@ -1,0 +1,61 @@
+body{
+  background-color: #E6E6FA;
+}
+
+#loginForm, #indexDiv, #createDiv{
+  margin: 10% auto;
+  background-color: #F5F5F5;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+  font-size: 1.3em;
+}
+#indexDiv{
+  padding-bottom: 50px;
+}
+#loginForm h1{
+  font-size: 1.5em;
+}
+#submitButton{
+  padding: 5px;
+  font-size: 1em;
+  background-color: #3E0082;
+  border-radius: 6px;
+  width: 80px;
+  height: 40px;
+  color: white;
+}
+#submitButton2{
+  padding: 5px;
+  font-size: 1em;
+  background-color: #3E0082;
+  border-radius: 6px;
+  width: 120px;
+  height: 40px;
+  color: white;
+}
+#submitButton:hover, #submitButton2:hover{
+  background-color: #7500F7;
+}
+#loginForm input, #createDiv input{
+  padding: 5px;
+  font-size: 0.8em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#createUser, #signOut{
+  padding: 10px;
+  color: white;
+  font-size: 0.8em;
+  background-color: #3E0082;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+#createUser:hover, #signOut:hover{
+  background-color: #7500F7;
+}
+#selectLevel{
+  font-size: 0.8em;
+  color: #3E0082;
+}

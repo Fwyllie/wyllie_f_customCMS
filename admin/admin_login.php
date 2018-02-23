@@ -16,19 +16,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Welcome to your admin panel login</title>
+<title>Fran's Admin Panel</title>
+<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<?php if(!empty($message)){ echo $message;} ?>
+	<div id="loginForm">
+	<h1>Login to Fran's amazing Admin Panel</h1>
+	<?php if(!empty($message)){ echo $message;} ?><br>
 	<form action="admin_login.php" method="post">
-		<label>Username:</label>
+		<label>Username:</label><br>
 		<input type="text" name="username" value="">
 		<br>
-		<label>Password</label>
+		<label>Password</label><br>
 		<input type="password" name="password" value="">
-		<br><br>
-		<input type="submit" name="submit" value="Show me the money">
+		<br>
+		<input id="submitButton" type="submit" name="submit" value="Login!">
 	</form>
+	</div>
 
 </body>
 </html>
