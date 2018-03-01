@@ -11,7 +11,7 @@
 			return $error;
 		}
 		mysqli_close($link);
-	}
+	} 
 
 	function getSingle($tbl, $col, $id) {
 		include('connect.php');

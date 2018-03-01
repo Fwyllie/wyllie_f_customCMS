@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 	require_once('phpscripts/config.php');
 	$ip = $_SERVER['REMOTE_ADDR'];
 	if(isset($_POST['submit'])){
