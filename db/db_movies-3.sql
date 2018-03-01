@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 23, 2018 at 07:36 PM
+-- Generation Time: Mar 01, 2018 at 04:04 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -1028,17 +1028,16 @@ CREATE TABLE `tbl_user` (
   `user_email` varchar(250) NOT NULL,
   `user_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `user_lvllist` varchar(15) NOT NULL,
-  `user_ip` varchar(50) NOT NULL DEFAULT 'no'
+  `user_ip` varchar(50) NOT NULL DEFAULT 'no',
+  `user_firstLog` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_lvllist`, `user_ip`) VALUES
-(1, 'Fran', 'fran', 'franfran', 'fran@fran.ca', '2018-02-23 18:03:38', '2', '::1'),
-(6, 'FRAAN', 'jen', '884354eb56db3323cbce63a5e177ecac', 'jordan@ryan.com', '2018-02-23 18:38:52', '1', '::1'),
-(8, 'ME', 'name', '5f4dcc3b5aa765d61d8327deb882cf99', 'no', '2018-02-23 19:30:09', '2', '::1');
+INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_lvllist`, `user_ip`, `user_firstLog`) VALUES
+(22, 'franfran', 'fran', '2c20cb5558626540a1704b1fe524ea9a', 'fran@fran', '2018-03-01 04:02:10', '1', 'no', 'yes');
 
 --
 -- Indexes for dumped tables
@@ -1251,7 +1250,7 @@ ALTER TABLE `tbl_urating`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
