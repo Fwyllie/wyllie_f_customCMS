@@ -41,15 +41,6 @@
       return $message;
     }
 
-  function expire(){
-    include('connect.php');
-    $expireString = "DELETE FROM tbl_user WHERE user_firstLog = 'yes' AND user_date = (NOW() + 1 MINUTE)";
-    $expireQuery = mysqli_query($link, $expireString);
-    if($expireQuery){
-      echo "works";
-    }
-  }
-
 
     mysqli_close($link);
   }
