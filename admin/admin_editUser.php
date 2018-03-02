@@ -7,7 +7,6 @@
 		$col = 'user_id';
 		$popForm = getSingle($tbl, $col, $id);
 		$info = mysqli_fetch_array($popForm);
-		//echo $info;
 
 
 	if(isset($_POST['submit'])){
@@ -27,6 +26,9 @@
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+	<!-- <?php  echo time(); ?><br>
+	<?php  echo strtotime($info['user_date']); ?> -->
+	<a href="admin_index.php" id="homebutton">Home!</a>
 	<div id="createDiv">
 		<h2>Edit User Info!</h2>
 		<?php if(!empty($message)) {echo $message;} ?>

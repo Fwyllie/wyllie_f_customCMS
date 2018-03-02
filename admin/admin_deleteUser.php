@@ -12,13 +12,14 @@
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<h2>Lets destory some lives :)</h2>
+	<a href="admin_index.php" id="homebutton">Home!</a>
+	<div id="deleteDiv">
+	<h2>It's a beautiful day to ruin some lives.</h2>
 	<?php
 		while($row = mysqli_fetch_array($users)){
-			echo "{$row['user_fname']}<a href=\"phpscripts/caller.php?caller_id=delete&id={$row['user_id']}\">FIRE THAT HOE</a><br> ";
+			echo "<div id=\"fireItem\"><p id=\"fireName\">{$row['user_fname']}</p><p id=\"fireButtonDiv\"><a id=\"fireButton\" href=\"phpscripts/caller.php?caller_id=delete&id={$row['user_id']}\">Goodbye</a></p></div> ";
 		}
-
 	 ?>
-
+</div>
 </body>
 </html>

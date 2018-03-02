@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 01, 2018 at 04:04 AM
+-- Generation Time: Mar 02, 2018 at 06:14 PM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -1029,14 +1029,14 @@ CREATE TABLE `tbl_user` (
   `user_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `user_lvllist` varchar(15) NOT NULL,
   `user_ip` varchar(50) NOT NULL DEFAULT 'no',
-  `user_firstLog` varchar(5) NOT NULL
+  `user_changedPas` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_lvllist`, `user_ip`, `user_firstLog`) VALUES
+INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_lvllist`, `user_ip`, `user_changedPas`) VALUES
 (22, 'franfran', 'fran', '2c20cb5558626540a1704b1fe524ea9a', 'fran@fran', '2018-03-01 04:02:10', '1', 'no', 'yes');
 
 --
@@ -1250,7 +1250,7 @@ ALTER TABLE `tbl_urating`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -15,13 +15,14 @@
 			$_SESSION['user_name'] = $founduser['user_fname'];
 			$cutOffT = 259200; //72 hours
 			$diffInT = time() - strtotime($founduser['user_date']);
-			if($founduser['user_firstLog'] === 'yes'){ //If they not have logged in and changed their account info before
+			if($founduser['user_changedPas'] === 'no'){ //If they not have logged in and changed their account info before
 				if($diffInT < $cutOffT){ //if the time between when the user was created and now is less than 259200 seconds it should let them in
 					if(mysqli_query($link, $loginstring)){
 						$update = "UPDATE tbl_user SET user_ip = '{$ip}' WHERE user_id={$id}";
 						$updatequery = mysqli_query($link, $update);
 					}
 				redirect_to("admin_editUser.php");
+
 			}else{ // if the time between when the user was created and now is greater than 259200 seconds it should NOT let them in and delete the login credentials
 				$loginDelMsg = "Your login has expired";
 				return $loginDelMsg;

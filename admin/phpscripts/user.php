@@ -3,7 +3,7 @@
   function createUser($fname, $username, $password, $email, $lvllist){
     include('connect.php');
     $crypt =  md5($password);
-    $userstring = "INSERT INTO tbl_user VALUES(NULL, '{$fname}', '{$username}', '{$crypt}', '{$email}', NULL, '{$lvllist}', 'no', 'yes')";
+    $userstring = "INSERT INTO tbl_user VALUES(NULL, '{$fname}', '{$username}', '{$crypt}', '{$email}', NULL, '{$lvllist}', 'no', 'no')";
     $userquery = mysqli_query($link, $userstring);
     if($userquery){
       redirect_to('admin_index.php');
@@ -17,7 +17,7 @@
   function editUser($fname, $username, $password, $email, $id){
     include('connect.php');
     $crypt =  md5($password);
-    $updateString = "UPDATE tbl_user SET user_fname='{$fname}', user_name='{$username}', user_pass='{$crypt}', user_email='{$email}' WHERE user_id = {$id}";
+    $updateString = "UPDATE tbl_user SET user_fname='{$fname}', user_name='{$username}', user_pass='{$crypt}', user_email='{$email}', user_changedPas='yes' WHERE user_id = {$id}";
     $updateQuery = mysqli_query($link, $updateString);
     if($updateQuery){
       redirect_to("admin_index.php");

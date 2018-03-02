@@ -24,6 +24,7 @@
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+	<a href="admin_index.php" id="homebutton">Home!</a>
 	<div id="createDiv">
 		<h2>Create a new user!</h2>
 		<?php if(!empty($message)) {echo $message;} ?>
