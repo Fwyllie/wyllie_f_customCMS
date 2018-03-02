@@ -1,6 +1,6 @@
 <?php
 	require_once('phpscripts/config.php');
-	confirm_logged_in();
+	//confirm_logged_in();
 
 	if(isset($_POST['submit'])){
 		$fname = trim($_POST['fname']);

@@ -7,7 +7,7 @@ body{
   background-color: #F5F5F5;
   padding: 20px;
   border-radius: 10px;
-  width: 30%;
+  width: 60%;
   text-align: center;
   font-size: 1.3em;
 }
@@ -52,7 +52,7 @@ body{
   border-radius: 6px;
   margin-bottom: 20px;
 }
-#createUser:hover, #signOut:hover{
+#createUser:hover, #signOut:hover, #editButton:hover, #delButton:hover{
   background-color: #7500F7;
 }
 #selectLevel{
