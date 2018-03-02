@@ -16,7 +16,7 @@
 			$cutOffT = 259200; //72 hours
 			$diffInT = time() - strtotime($founduser['user_date']);
 			if($founduser['user_firstLog'] === 'yes'){ //If they not have logged in and changed their account info before
-				if($diffInT > $cutOffT){ //if the time between when the user was created and now is less than 259200 seconds it should let them in
+				if($diffInT < $cutOffT){ //if the time between when the user was created and now is less than 259200 seconds it should let them in
 					if(mysqli_query($link, $loginstring)){
 						$update = "UPDATE tbl_user SET user_ip = '{$ip}' WHERE user_id={$id}";
 						$updatequery = mysqli_query($link, $update);
