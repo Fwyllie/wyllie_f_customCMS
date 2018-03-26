@@ -25,23 +25,20 @@
       $message = "Your info could not be updated";
       return $message;
     }
-
     mysqli_close($link);
   }
 
-  function deleteUser($id){
+  function deleteMovie($id){
     include('connect.php');
 
-    $delString = "DELETE FROM tbl_user WHERE user_id = {$id}";
+    $delString = "DELETE FROM tbl_movies WHERE movies_id = {$id}";
     $delQuery =  mysqli_query($link, $delString);
     if($delQuery){
       redirect_to("../admin_index.php");
     }else{
-      $message = "Girl BYE";
+      $message = "Something went wrong :(";
       return $message;
     }
-
-
     mysqli_close($link);
   }
 

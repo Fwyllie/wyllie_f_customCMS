@@ -19,22 +19,21 @@ error_reporting(E_ALL);
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Fran's Admin Panel</title>
+<title>Franflix Admin Login</title>
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<div id="loginForm">
-	<h1>Login to Fran's amazing Admin Panel</h1>
-	<?php if(!empty($message)){ echo $message;} ?><br>
-	<form action="admin_login.php" method="post">
-		<label>Username:</label><br>
-		<input type="text" name="username" value="">
-		<br>
-		<label>Password</label><br>
-		<input type="password" name="password" value="">
-		<br>
-		<input id="submitButton" type="submit" name="submit" value="Login!">
-	</form>
+	<div id="loginFormDiv">
+		<h1>Login to Franflix Admin Panel</h1>
+		<p>Please login below</p>
+		<?php if(!empty($message)){ echo $message;} ?><br>
+		<form id="loginForm" action="admin_login.php" method="post">
+			<label>Username:</label><br>
+			<input id="user" type="text" name="username" value="">
+			<label>Password:</label><br>
+			<input id="pass" type="password" name="password" value="">
+			<input id="submitButton" type="submit" name="submit" value="Login!">
+		</form>
 	</div>
 
 </body>

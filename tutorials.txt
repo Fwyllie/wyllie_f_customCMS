@@ -1,5 +1,0 @@
-http://php.net/manual/en/function.strtotime.php
-
-http://php.net/manual/en/function.time.php
-
-https://howto.caspio.com/tech-tips-and-articles/common-customizations/create-user-specific-redirect-after-login/

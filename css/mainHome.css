@@ -1,0 +1,77 @@
+body{
+  margin: 0;
+}
+.topBar {
+  background-color: #4A15B7;
+  margin: 0 0 30px 0;
+  padding: 10px;
+  text-align: center;
+}
+#welcomeMessage{
+  font-size: 1.4em;
+  color: white;
+  margin-bottom: 20px;
+}
+.filterNav{
+  text-align: center;
+}
+.filterNav li{
+  display: inline;
+  margin-right: 20px;
+  line-height: 30px;
+}
+.filterNav li a{
+  color: #77797D;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+.filterNav li a:hover{
+  color: white;
+}
+.movieCover{
+  width: 50%;
+  opacity: .75;
+}
+.movieCover:hover{
+  opacity: 1;
+}
+.footerBar{
+  background-color: #4A15B7;
+  height: 50px;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+#adminLink{
+  color: #ccc;
+  font-size: 1.3em;
+  text-decoration: none;
+}
+#adminLink:hover{
+  color: #FFF;
+}
+
+/*******************DETAILS PAGE*******************/
+
+.backButton{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  opacity: .35;
+  border: 2px solid #FFF;
+  padding: 5px;
+  color: white;
+}
+.backButton:hover{
+  opacity: 1;
+}
+.deatilsDiv{
+  padding: 10px;
+  background: linear-gradient(to bottom right, #1A0536, #000);
+  color: #fff;
+  padding-bottom: 30px;
+}
+.detailsCov{
+  max-width: 100%;
+  margin: 0 auto;
+}

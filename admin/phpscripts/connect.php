@@ -3,9 +3,9 @@
 	$user = "root";
 	$pass = "root";
 	$url = "localhost";
-	$db = "db_movies";
+	$db = "db_WyllieCms";
 
-	$link = mysqli_connect($url, $user, $pass, $db, "8889"); 
+	$link = mysqli_connect($url, $user, $pass, $db, "8889");
 
 
 	/* check connection */

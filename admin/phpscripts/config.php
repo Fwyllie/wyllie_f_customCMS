@@ -4,5 +4,6 @@
 	require_once('login.php');
 	require_once('sessions.php');
 	require_once('user.php');
-	require_once('mail.php');
+	require_once('addMovie.php');
+	require_once('single_edit_form.php');
 ?>

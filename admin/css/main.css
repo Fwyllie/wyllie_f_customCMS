@@ -1,87 +1,143 @@
 body{
-  background-color: #E6E6FA;
+  background: linear-gradient(to bottom right, #1A0536, #000);
+  min-height: 100vh;
 }
-
-#loginForm, #indexDiv, #createDiv, #deleteDiv{
-  margin: 10% auto;
-  background-color: #F5F5F5;
-  padding: 20px;
-  border-radius: 10px;
-  width: 60%;
+#loginFormDiv{
   text-align: center;
+  color: white;
+}
+#loginFormDiv h1{
+  font-size: 1.6em;
+  margin-top: 50px;
+}
+#loginForm{
+  width: 80%;
+  margin: 20px auto;
   font-size: 1.3em;
+  text-align: left;
 }
-#indexDiv{
-  padding-bottom: 50px;
-}
-#loginForm h1{
-  font-size: 1.5em;
+#user, #pass{
+  width: 100%;
+  margin: 15px 0px 30px;
+  font-size: 1.1em;
+  padding: 5px;
 }
 #submitButton{
+  margin: 20px 35%;
+  width: 40%;
+  font-size: 1.2em;
   padding: 5px;
-  font-size: 1em;
-  background-color: #3E0082;
-  border-radius: 6px;
-  width: 80px;
-  height: 40px;
+}
+#submitButton:hover{
+  background-color: #936CFF;
+  color: #000;
+}
+
+/*****************************INDEX*************************/
+#indexDiv{
   color: white;
-}
-#submitButton2{
-  padding: 5px;
-  font-size: 1em;
-  background-color: #3E0082;
-  border-radius: 6px;
-  width: 120px;
-  height: 40px;
-  color: white;
-}
-#submitButton:hover, #submitButton2:hover{
-  background-color: #7500F7;
-}
-#loginForm input, #createDiv input{
-  padding: 5px;
-  font-size: 0.8em;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-#createUser, #signOut, #editButton, #delButton{
+  text-align: center;
   padding: 10px;
+}
+#indexDiv a {
   color: white;
-  font-size: 0.8em;
-  background-color: #3E0082;
-  border-radius: 6px;
-  margin-bottom: 20px;
-}
-#createUser:hover, #signOut:hover, #editButton:hover, #delButton:hover{
-  background-color: #7500F7;
-}
-#selectLevel{
-  font-size: 0.8em;
-  color: #3E0082;
-}
-#fireItem{
-  border: 2px solid #3E0082;
-  padding: 5px;
-  margin-bottom: 10px;
-}
-#fireName{
-  font-size: 1em;
-  display: inline;
-  margin-right: 20px;
-}
-#fireButtonDiv{
-    display: inline;
-}
-#fireButton{
   text-decoration: none;
-  color: #3E0082;
+  font-size: 1.2em;
+  margin-right: 15px;
+  line-height: 60px;
+  border: 2px solid #936CFF;
+  padding: 7px;
 }
-#fireButton:hover{
-  color: #7500F7;
+#indexDiv a:hover {
+  color: #936CFF;
+  border: 2px solid #FFF;
 }
-#homebutton{
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  font-size: 1.4em;
+#signOut{
+  color: #936CFF;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-decoration: none;
+}
+#signOut:hover{
+  color: white;
+}
+
+/****************ADD MOVIE******************/
+.homeButton{
+  position: absolute;
+  font-size: 1.1em;
+  top: 10px;
+  right: 10px;
+  color: #936CFF;
+  text-decoration: none;
+}
+.homeButton:hover{
+  color: white;
+}
+#addMovieDiv{
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+#addMovieForm{
+  text-align: left;
+  font-size: 1.2em;
+}
+#addMovieForm input, #addMovieForm select{
+  margin: 15px 0;
+  padding: 5px;
+  font-size: 0.9em;
+}
+#addMovieForm select{
+  font-size: 0.8em;
+}
+/*******************EDIT MOVIE***********************/
+#selEditDiv, #deleteDiv{
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+#moviesEdit, .delItemDiv{
+  text-align: left;
+  font-size: 1.2em;
+  border-bottom: 2px solid #936CFF;
+}
+#editName, .delName{
+  display: inline-block;
+}
+#editButton, .delButton{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  right: 30px;
+  margin-top: 20px;
+}
+#editButton:hover{
+  color: #936CFF;
+}
+.delButton:hover{
+  color: #BD211E;
+}
+
+.editMovieDiv{
+  color: white;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 10px;
+}
+.editMovieForm{
+  text-align: left;
+}
+.editMovieForm input, .editMovieForm  select{
+  margin: 15px 0;
+  padding: 5px;
+  font-size: 0.9em;
+}
+.editMovieForm  select{
+  font-size: 0.8em;
+}
+#submitEdit:hover{
+  background-color: #936CFF;
 }
