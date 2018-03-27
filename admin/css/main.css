@@ -23,14 +23,18 @@ body{
   padding: 5px;
 }
 #submitButton{
+  color: #000;
   margin: 20px 35%;
   width: 40%;
   font-size: 1.2em;
   padding: 5px;
+  border: 0px;
+  background-color: #fff;
+  border-radius: 3px;
 }
 #submitButton:hover{
   background-color: #936CFF;
-  color: #000;
+  border: 0px;
 }
 
 /*****************************INDEX*************************/
@@ -84,6 +88,9 @@ body{
   text-align: left;
   font-size: 1.2em;
 }
+#addMovieForm input{
+  -webkit-appearance:default-button;
+}
 #addMovieForm input, #addMovieForm select{
   margin: 15px 0;
   padding: 5px;
@@ -98,6 +105,9 @@ body{
   padding: 10px;
   text-align: center;
 }
+#moviesEdit:nth-of-type(even){
+  background-color: rgba(255, 255, 255, 0.1);
+}
 #moviesEdit, .delItemDiv{
   text-align: left;
   font-size: 1.2em;
@@ -105,19 +115,26 @@ body{
 }
 #editName, .delName{
   display: inline-block;
+  margin: 25px 10px ;
 }
-#editButton, .delButton{
+#editButton, .delButton, .editRevButton{
   display: inline-block;
   color: white;
   text-decoration: none;
   position: absolute;
   right: 30px;
-  margin-top: 20px;
+  margin-top: 5px;
+}
+.delButton{
+  margin-top: 25px;
+}
+.editRevButton{
+  margin-top: 45px;
 }
 #editButton:hover{
   color: #936CFF;
 }
-.delButton:hover{
+.delButton:hover, .editRevButton:hover{
   color: #BD211E;
 }
 

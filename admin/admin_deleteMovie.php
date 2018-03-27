@@ -17,7 +17,7 @@
 	<h2>Delete a Movie.</h2>
 	<?php
 		while($row = mysqli_fetch_array($movies)){
-			echo "<div class=\"delItemDiv\"><p class=\"delName\">{$row['movies_title']}</p><a class=\"delButton\" href=\"phpscripts/caller.php?caller_id=delete&id={$row['movies_id']}\">Delete</a></div> ";
+			echo "<div class=\"delItemDiv\"><p class=\"delName\">{$row['movies_title']}</p><a class=\"delButton\" href=\"phpscripts/caller.php?caller_id=deleteMov&id={$row['movies_id']}\">Delete</a></div> ";
 		}
 	 ?>
 </div>

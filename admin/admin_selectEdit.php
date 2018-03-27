@@ -17,7 +17,10 @@
 	<h2>Select a Movie to Edit</h2>
 	<?php
 		while($row = mysqli_fetch_array($movies)){
-			echo "<div id=\"moviesEdit\"><p id=\"editName\">{$row['movies_title']}</p><a id=\"editButton\" href=\"admin_editMovie.php?id={$row['movies_id']}\">Edit</a></div> ";
+			echo "<div id=\"moviesEdit\"><p id=\"editName\">{$row['movies_title']}</p>
+			<a id=\"editButton\" href=\"admin_editMovie.php?id={$row['movies_id']}\">Edit Movie Details</a>
+			<a class=\"editRevButton\" href=\"admin_editReviews.php?id={$row['movies_id']}\">Delete Reviews</a>
+			</div> ";
 		}
 	 ?>
 </div>

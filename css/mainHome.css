@@ -4,11 +4,15 @@ body{
 .topBar {
   background-color: #4A15B7;
   margin: 0 0 30px 0;
-  padding: 10px;
+  padding: 10px 10px 30px;
   text-align: center;
+  color: #fff;
+}
+.topBar p{
+  font-size: 1.3em;
 }
 #welcomeMessage{
-  font-size: 1.4em;
+  font-size: 2em;
   color: white;
   margin-bottom: 20px;
 }
@@ -21,11 +25,18 @@ body{
   line-height: 30px;
 }
 .filterNav li a{
-  color: #77797D;
   font-size: 1.1em;
+  color: white;
   text-decoration: none;
 }
 .filterNav li a:hover{
+  color: #936CFF;
+}
+#clear{
+  text-decoration: none;
+  color: #8D9191;
+}
+#clear:hover{
   color: white;
 }
 .movieCover{
@@ -51,12 +62,13 @@ body{
   color: #FFF;
 }
 
+
 /*******************DETAILS PAGE*******************/
 
 .backButton{
   position: fixed;
   top: 10px;
-  left: 10px;
+  right: 10px;
   opacity: .35;
   border: 2px solid #FFF;
   padding: 5px;
@@ -65,13 +77,56 @@ body{
 .backButton:hover{
   opacity: 1;
 }
-.deatilsDiv{
+.details{
   padding: 10px;
   background: linear-gradient(to bottom right, #1A0536, #000);
   color: #fff;
   padding-bottom: 30px;
 }
+.MovDetailsDiv{
+  padding-bottom: 10px;
+  border-bottom: 3px solid #936CFF;
+}
 .detailsCov{
   max-width: 100%;
   margin: 0 auto;
+}
+#addReviewDiv{
+  text-align: center;
+  padding-bottom: 30px;
+  border-bottom: 3px solid #936CFF;
+}
+#addReviewForm input{
+  font-size: 1.1em;
+  margin: 10px 0px;
+}
+#addReviewForm textarea{
+  font-size: 1em;
+  margin: 10px 0px;
+}
+#submitButton{
+  font-size: 0.9em;
+  padding: 4px;
+  border-radius: 3px;
+}
+#submitButton:hover{
+  background-color: #936CFF;
+}
+.reviewsDiv h2{
+  text-align: center;
+  width: 30%;
+  margin: 20px auto;
+  padding-bottom: 5px;
+  border-bottom: 2px solid white;
+}
+.singleReview{
+  border-bottom: 2px solid #936CFF;
+  padding: 10px 10px 0;
+}
+.singleReview:nth-of-type(even){
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.singleReview:last-of-type{
+  border-bottom: 0px;
+  padding:10px 10px 10px;
 }

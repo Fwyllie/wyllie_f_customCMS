@@ -32,7 +32,7 @@ error_reporting(E_ALL);
 			<input id="user" type="text" name="username" value="">
 			<label>Password:</label><br>
 			<input id="pass" type="password" name="password" value="">
-			<input id="submitButton" type="submit" name="submit" value="Login!">
+			<button id="submitButton" type="submit" name="submit">Login!</button>
 		</form>
 	</div>
 
