@@ -12,7 +12,8 @@
 		$getMovies = filterResults($tbl, $tbl2, $tbl3, $col, $col2, $col3, $filter);
 	}else{
 		$tbl = "tbl_movies";
-		$getMovies = getAll($tbl);
+		$col = 'movies_title';
+		$getMovies = getAll($tbl, $col);
 	}
 ?>
 <!doctype html>

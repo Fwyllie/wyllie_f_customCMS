@@ -1,18 +1,25 @@
 <?php
 	require_once('phpscripts/config.php');
 	//confirm_logged_in();
+	ini_set('display_errors', 1);
+	error_reporting(E_ALL);
 
 	if(isset($_POST['submit'])){
 		$fname = trim($_POST['fname']);
 		$username = trim($_POST['username']);
 		$password =  trim($_POST['password']);
 		$email = trim($_POST['email']);
-		$lvllist = $_POST['lvllist'];
-		if(empty($lvllist)){
-			$message = "Please select a user level.";
+		if(empty($email)){
+			$message = "Please create an email!";
+		// }else if(empty($fname)){
+		// 	$message = "Please create a first name!";
+		// }else if(empty($username)){
+		// 	$message = "Please create username!";
+		// }else if(empty($password)){
+		// 	$message = "Please create a password!";
 		}else{
-			$sendMail = sendMessage($email, $username, $password, $link);
-		 	$result = createUser($fname, $username, $password, $email, $lvllist);
+			// $sendMail = sendMessage($email, $username, $password, $link);
+		 	$result = createUser($fname, $username, $password, $email);
 		}
 	}
 ?>
@@ -20,7 +27,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Fran's Admin Panel - Create</title>
+<title>Fran's Admin Panel - Create User</title>
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -37,11 +44,6 @@
 			<input type="text" name="password" value=""><br><br>
 			<label>Email:</label><br>
 			<input type="text" name="email" value=""><br><br>
-			<select id="selectLevel" name="lvllist">
-				<option value="">Select user Level</option>
-				<option value="2">Web Admin</option>
-				<option value="1">Web Master</option>
-			</select><br><br>
 			<input id="submitButton2" type="submit" name="submit" value="Create User">
 		</form>
 	</div>

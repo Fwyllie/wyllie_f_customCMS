@@ -16,6 +16,10 @@
 		<a id="addMovieButton" href="admin_addMovie.php">Add Movie</a>
 		<a href="admin_selectEdit.php">Edit Movie</a>
 		<a id="delButton" href="admin_deleteMovie.php">Delete Movie</a>
+		<br>
+		<a id="addUserButton" href="admin_createUser.php">Add User</a>
+		<a id="addUserButton" href="admin_selectUserEdit.php">Edit User</a>
+		<a id="addUserButton" href="admin_deleteUser.php">Delete User</a>
 	<div>
 </body>
 </html>

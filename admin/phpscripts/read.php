@@ -1,8 +1,8 @@
 <?php
 
-	function getAll($tbl) {
+	function getAll($tbl, $col) {
 		include('connect.php');
-		$queryAll = "SELECT * FROM {$tbl}";
+		$queryAll = "SELECT * FROM {$tbl} ORDER BY {$col} ASC";
 		$runAll = mysqli_query($link, $queryAll);
 		if($runAll){
 			return $runAll;

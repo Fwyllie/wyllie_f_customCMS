@@ -11,7 +11,10 @@ if(isset($_GET['caller_id'])){
   }else if($dir == "deleteRev"){
     $id = $_GET['id'];
     deleteReview($id);
-  }else{
+  }else if($dir == "deleteUser"){
+    $id = $_GET['id'];
+    deleteUser($id);
+  }{
     echo "Caller id was created incorrectly.";
   }
 }

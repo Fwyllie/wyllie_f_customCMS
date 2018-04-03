@@ -4,7 +4,8 @@ error_reporting(E_ALL);
 require_once('phpscripts/config.php');
 
 	$tbl = "tbl_genre";
-	$genQuery = getAll($tbl);
+	$col = 'genre_name';
+	$genQuery = getAll($tbl, $col);
 
 	if(isset($_POST['submit'])){
 		$cover = $_FILES['cover'];

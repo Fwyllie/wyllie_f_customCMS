@@ -1,9 +1,8 @@
 <?php
 
-  function createUser($fname, $username, $password, $email, $lvllist){
+  function createUser($fname, $username, $password, $email){
     include('connect.php');
-    $crypt =  md5($password);
-    $userstring = "INSERT INTO tbl_user VALUES(NULL, '{$fname}', '{$username}', '{$crypt}', '{$email}', NULL, '{$lvllist}', 'no', 'no')";
+    $userstring = "INSERT INTO tbl_user VALUES(NULL, '{$fname}', '{$username}', '{$password}', '{$email}', NULL, 'no')";
     $userquery = mysqli_query($link, $userstring);
     if($userquery){
       redirect_to('admin_index.php');
@@ -23,6 +22,20 @@
       redirect_to("admin_index.php");
     }else{
       $message = "Your info could not be updated";
+      return $message;
+    }
+    mysqli_close($link);
+  }
+
+  function deleteUser($id){
+    include('connect.php');
+
+    $delString = "DELETE FROM tbl_user WHERE user_id = {$id}";
+    $delQuery =  mysqli_query($link, $delString);
+    if($delQuery){
+      redirect_to("../admin_index.php");
+    }else{
+      $message = "Something went wrong :(";
       return $message;
     }
     mysqli_close($link);
