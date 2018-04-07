@@ -1,7 +1,7 @@
 <?php
 function addRev($name, $review, $rating, $id){
     include('connect.php');
-      if(!empty($review)){
+      if(!empty($review) && !empty($rating) && !empty($name)){
         $qstring = "INSERT INTO tbl_reviews VALUES(NULL, '{$name}', '{$rating}', '{$review}')";
         $revResult = mysqli_query($link, $qstring);
         if($revResult){
@@ -15,9 +15,9 @@ function addRev($name, $review, $rating, $id){
           $message = "There was an error adding your review, please try again";
           return $message;
         }
-        // redirect_to("admin_index.php");
       }else{
-      echo "Please Fill Out Fields";
+        $message = "Please fill out all of the required fields.";
+        return $message;
       }
     mysqli_close($link);
   }

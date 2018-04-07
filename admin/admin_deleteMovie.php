@@ -2,7 +2,7 @@
 	require_once('phpscripts/config.php');
 	// confirm_logged_in();
 	$tbl = 'tbl_movies';
-	$col = 'movies_title'
+	$col = 'movies_title';
 	$movies = getAll($tbl, $col);
 ?>
 <!doctype html>

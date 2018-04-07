@@ -17,28 +17,21 @@ require_once('phpscripts/config.php');
 		$genre = $_POST['genre'];
 		$result = addMovie($cover, $title, $year, $duration, $desc, $trailer, $genre);
 		$message =  $result;
-
-		// echo $cover['name'];
-		// echo $cover['type'];
-		// echo $cover['size']; / IN BYTES
-		// echo $cover['tmp_name']; //where the file saves
-
 	}
 ?>
 <!doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Franflix Admin Panel - Add</title>
+<title>Franflix Admin Panel - Add Movie</title>
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body id="add">
 	<a class="homeButton" href="admin_index.php">Home</a>
-	<div id="addMovieDiv">
+	<div id="createDiv">
 		<h1>Add a New Movie!</h1>
-		<?php if(!empty($message)){ echo $message;} ?><br>
-		<form  id="addMovieForm" action="admin_addMovie.php" method="post" enctype="multipart/form-data">
-			<!-- enctype allows to upload files (images movies etc) -->
+		<?php if(!empty($message)){ echo $message;} ?>
+		<form  id="addForm" action="admin_addMovie.php" method="post" enctype="multipart/form-data">
 			<label>Movie Poster:</label><br>
 			<input type="file" name="cover">
 			<br>

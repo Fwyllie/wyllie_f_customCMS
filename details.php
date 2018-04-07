@@ -29,6 +29,7 @@
 </head>
 <body>
 <div class="details">
+	<h1 id="welcomeMessage">Franflix</h1>
 	<?php
 		if(!is_string($getMovie)) {
 			$row=mysqli_fetch_array($getMovie);
@@ -51,10 +52,17 @@
 				}
 				echo "<form  id=\"addReviewForm\" action=\"details.php?id={$id}\" method=\"post\">
 				<label>Your Name:</label><br>
-				<input type=\"text\" maxlength=\"20\" name=\"name\">
+				<input type=\"text\" maxlength=\"100\" name=\"name\">
 				<br>
-				<label>Rating out of 10:</label><br>
-				<input type=\"text\" name=\"rate\" placeholder=\"8/10\">
+				<label>Rating: </label><br>
+				<select name=\"rate\">
+					<option value=\"\"></option>
+					<option value=\"1\">1</option>
+					<option value=\"2\">2</option>
+					<option value=\"3\">3</option>
+					<option value=\"4\">4</option>
+					<option value=\"5\">5</option>
+				</select>
 				<br>
 				<label>Review:</label><br>
 				<textarea type=\"text\" name=\"review\" rows\"15\" cols=\"30\"></textarea>
@@ -66,7 +74,11 @@
 			<h2>User Reviews!</h2>
 			<?php
 				while($row = mysqli_fetch_array($getReviews)){
-					echo "<div class=\"singleReview\"><h3 class=\"revName\">{$row['reviews_name']}</h3><p class=\"revRating\">{$row['reviews_rating']}/10</p><p class=\"revReview\">{$row['reviews_review']}</p></div>";
+					echo "<div class=\"singleReview\"><h3 class=\"revName\">{$row['reviews_name']}</h3>";
+					echo "<div class=\"starHolder\">";
+					echo str_repeat("<img class=\"star\" src=\"images/star.svg\" alt=\"star\">", $row['reviews_rating']);
+					echo "</div>";
+					echo "<p class=\"revReview\">{$row['reviews_review']}</p></div>";
 				}
 			 ?>
 		</div>

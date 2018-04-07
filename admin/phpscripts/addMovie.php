@@ -2,10 +2,8 @@
 
   function addMovie($cover, $title, $year, $duration, $desc, $trailer, $genre){
     include('connect.php');
-    if($cover['type'] == "image/jpg" || $cover['type'] == "image/jpeg" || $cover['type'] == "image/png"){
+    if($cover['type'] == "image/jpg" || $cover['type'] == "image/jpeg"){
       $targetPath = "../images/{$cover['name']} ";
-
-
       if(move_uploaded_file($cover['tmp_name'], $targetPath)){
         // echo "File transfered";
         $th_copy = "../images/TH_{$cover['name']}";
@@ -30,10 +28,17 @@
           $message = "There was an error adding that movie, please try again";
           return $message;
         }
-        redirect_to("admin_index.php");
+        // redirect_to("admin_index.php");
       }
-      // $size = getimagesize($targetPath);
+      $newwidth = 405;
+      $newheight = 600;
+      $size = getimagesize($targetPath);
       // echo $size[3];
+      // echo $size[1];
+      // echo $size[0];
+      $source = imagecreatefromjpeg($targetPath);
+      $new = imagecreatefromjpeg($th_copy);
+      imagecopyresized($new, $source, 0, 0, 0, 0, $newwidth, $newheight, $size[0], $size[1]);
     }
     else{
       echo "WRONG FILE TYPE";

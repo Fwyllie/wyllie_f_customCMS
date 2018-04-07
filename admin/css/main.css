@@ -38,19 +38,26 @@ body{
 }
 
 /*****************************INDEX*************************/
+#indexBody{
+  padding: 10px;
+}
 #indexDiv{
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 0 10px 10px;
+  margin-top: 20%;
+  border: 3px white solid;
 }
 #indexDiv a {
+  display: inline-block;
+  width: 60%;
   color: white;
   text-decoration: none;
   font-size: 1.2em;
-  margin-right: 15px;
   line-height: 60px;
   border: 2px solid #936CFF;
-  padding: 7px;
+  padding: 5px;
+  margin: 10px 0;
 }
 #indexDiv a:hover {
   color: #936CFF;
@@ -67,6 +74,7 @@ body{
   color: white;
 }
 
+
 /****************ADD MOVIE******************/
 .homeButton{
   position: absolute;
@@ -79,24 +87,32 @@ body{
 .homeButton:hover{
   color: white;
 }
-#addMovieDiv{
+#add{
+  padding: 10px;
+}
+#createDiv{
   color: white;
   padding: 10px;
   text-align: center;
+  border: 3px solid #fff;
+  margin-top: 25px;
 }
-#addMovieForm{
-  text-align: left;
+#createDiv h1{
+  margin-top: 0;
+}
+#addForm{
+  text-align: center;
   font-size: 1.2em;
 }
-#addMovieForm input{
+#addForm input{
   -webkit-appearance:default-button;
 }
-#addMovieForm input, #addMovieForm select{
+#addForm input, #addForm select{
   margin: 15px 0;
   padding: 5px;
   font-size: 0.9em;
 }
-#addMovieForm select{
+#addForm select{
   font-size: 0.8em;
 }
 /*******************EDIT MOVIE***********************/
@@ -161,4 +177,56 @@ body{
 /***CREATE USER**/
 #createDiv{
   color: white;
+}
+
+
+
+
+
+
+/*************MEDIA QUERIES******************/
+
+@media screen and (min-width:640px) {
+  #indexDiv{
+    margin-top: 10%;
+  }
+  #indexDiv a {
+    width: 23%;
+    margin: 10px;
+  }
+  .MovDetailsDiv{
+    width: 80%;
+    margin: 5% auto;
+  }
+  #createDiv{
+    width: 80%;
+    margin: 5% auto;
+  }
+}
+@media screen and (min-width:1024px) {
+  #indexDiv{
+    width: 70%;
+    margin: 10% auto 0;
+  }
+  #indexDiv a {
+    width: 18%;
+    margin: 20px;
+  }
+  .MovDetailsDiv{
+    width: 60%;
+  }
+  #createDiv{
+    width: 60%;
+    margin: 5% auto;
+  }
+}
+@media screen and (min-width:1400px) {
+  #indexDiv{
+    width: 60%;
+    margin: 10% auto 0;
+  }
+  #indexDiv a {
+    width: 20%;
+    margin: 30px;
+  }
 }
