@@ -5,7 +5,7 @@
     $result = getSingle($tbl, $col, $id);
     $getResult = mysqli_fetch_array($result);
 
-    echo "<form class=\"editMovieForm\" action=\"phpscripts/edit.php\" method=\"post\">";
+    echo "<form class=\"editForm\" action=\"phpscripts/edit.php\" method=\"post\">";
     echo "<input hidden name=\"tbl\" value=\"{$tbl}\">";
     echo "<input hidden name=\"col\" value=\"{$col}\">";
     echo "<input hidden name=\"id\" value=\"{$id}\">";
@@ -19,16 +19,16 @@
       $fieldType = $dataType->type;
 
       if($fieldName != $col){
-        if($fieldName != "252" && $fieldName != "movies id"){
+        if($fieldName != "252" && $fieldName != "movies id" && $fieldName != "user id" && $fieldName != "user ip" && $fieldName != "user created"){
           echo "<label>{$fieldName}</label><br>";
-          echo "<input type=\"text\" name=\"{$fieldName}\" value=\"{$getResult[$i]}\"<br><br>";
-        }else{
+          echo "<input class=\"editInput\" type=\"text\" name=\"{$fieldName}\" value=\"{$getResult[$i]}\"<br><br>";
+        }else if($fieldName != "movies id" && $fieldName != "user id" && $fieldName != "user ip" && $fieldName != "user created"){
           echo "<label>{$fieldName}</label><br>";
-          echo "<textarea name=\"{$fieldName}\">{$getResult[$i]}</textarea><br>";
+          echo "<textarea class=\"editInput\" name=\"{$fieldName}\">{$getResult[$i]}</textarea><br>";
         }
       }
     }
-    echo "<input id=\"submitEdit\" type=\"submit\" name=\"submit\" value=\"Save Content\">";
+    echo "<button id=\"submitEdit\" type=\"submit\" name=\"submit\">Save</button>";
     echo "</form>";
   }
 

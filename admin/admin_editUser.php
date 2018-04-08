@@ -10,7 +10,7 @@
 </head>
 <body>
 <a class="homeButton" href="admin_index.php">Home</a>
-<div class="editMovieDiv">
+<div class="editDiv">
 	<h2>Edit User!</h2>
 	<?php
 		$tbl = "tbl_user";

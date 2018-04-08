@@ -19,7 +19,7 @@
 	<?php
 		while($row = mysqli_fetch_array($users)){
 			echo "<div id=\"usersEdit\"><p id=\"editName\">{$row['user_fname']}</p>
-			<a id=\"editButton\" href=\"admin_editUser.php?id={$row['user_id']}\">Edit Movie Details</a>
+			<a id=\"editUserButton\" href=\"admin_editUser.php?id={$row['user_id']}\">Edit User</a>
 			</div> ";
 		}
 	 ?>

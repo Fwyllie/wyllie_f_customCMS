@@ -5,6 +5,8 @@ body{
 #loginFormDiv{
   text-align: center;
   color: white;
+  padding: 10px;
+  border: 2px solid white;
 }
 #loginFormDiv h1{
   font-size: 1.6em;
@@ -121,10 +123,10 @@ body{
   padding: 10px;
   text-align: center;
 }
-#moviesEdit:nth-of-type(even){
+#moviesEdit:nth-of-type(even), #usersEdit:nth-of-type(even), .delItemDiv:nth-of-type(even){
   background-color: rgba(255, 255, 255, 0.1);
 }
-#moviesEdit, .delItemDiv{
+#moviesEdit, #usersEdit, .delItemDiv{
   text-align: left;
   font-size: 1.2em;
   border-bottom: 2px solid #936CFF;
@@ -133,7 +135,7 @@ body{
   display: inline-block;
   margin: 25px 10px ;
 }
-#editButton, .delButton, .editRevButton{
+#editButton, #editUserButton, .delButton, .editRevButton{
   display: inline-block;
   color: white;
   text-decoration: none;
@@ -147,32 +149,46 @@ body{
 .editRevButton{
   margin-top: 45px;
 }
-#editButton:hover{
+#editUserButton{
+  margin-top: 25px;
+}
+#editButton:hover, #editUserButton:hover{
   color: #936CFF;
 }
 .delButton:hover, .editRevButton:hover{
   color: #BD211E;
 }
-
-.editMovieDiv{
+.editDiv{
   color: white;
   text-align: center;
   font-size: 1.2em;
   padding: 10px;
+  border: 2px solid white;
 }
 .editMovieForm{
   text-align: left;
 }
-.editMovieForm input, .editMovieForm  select{
+.editForm input, .editForm  select{
   margin: 15px 0;
   padding: 5px;
   font-size: 0.9em;
 }
-.editMovieForm  select{
+.editForm  select{
   font-size: 0.8em;
+}
+#submitEdit{
+  color: #000;
+  margin: 20px 30%;
+  width: 30%;
+  font-size: 1em;
+  padding: 5px;
+  border: 0px;
+  background-color: #fff;
+  border-radius: 3px;
 }
 #submitEdit:hover{
   background-color: #936CFF;
+  border: 0px;
 }
 /***CREATE USER**/
 #createDiv{
@@ -187,7 +203,7 @@ body{
 /*************MEDIA QUERIES******************/
 
 @media screen and (min-width:640px) {
-  #indexDiv{
+  #indexDiv, #loginFormDiv{
     margin-top: 10%;
   }
   #indexDiv a {
@@ -204,7 +220,7 @@ body{
   }
 }
 @media screen and (min-width:1024px) {
-  #indexDiv{
+  #indexDiv, #loginFormDiv{
     width: 70%;
     margin: 10% auto 0;
   }
@@ -221,7 +237,7 @@ body{
   }
 }
 @media screen and (min-width:1400px) {
-  #indexDiv{
+  #indexDiv, #loginFormDiv{
     width: 60%;
     margin: 10% auto 0;
   }
