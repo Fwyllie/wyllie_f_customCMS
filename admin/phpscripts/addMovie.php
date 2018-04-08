@@ -11,13 +11,13 @@
           return $message;
         }
         $size = getimagesize($targetpath);
-        list( $width,$height ) = getimagesize($targetpath);
+        list($width,$height) = getimagesize($targetpath);
         $newwidth = 405;
         $newheight = 600;
         $thumb = imagecreatetruecolor( $newwidth, $newheight);
         $source = imagecreatefromjpeg($th_copy);
         imagecopyresized($thumb, $source, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
-        imagejpeg( $thumb, $th_copy, 100 );
+        imagejpeg( $thumb, $th_copy, 100);
         $out_image=addslashes(file_get_contents($th_copy));
 
         //Add to db

@@ -1,6 +1,6 @@
 <?php
 	require_once('phpscripts/config.php');
-	// confirm_logged_in();
+	confirm_logged_in();
 	$tbl = 'tbl_user';
 	$col = 'user_fname';
 	$movies = getAll($tbl, $col);
