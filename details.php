@@ -34,7 +34,8 @@
 		if(!is_string($getMovie)) {
 			$row=mysqli_fetch_array($getMovie);
 			echo "<a class=\"backButton\" href=\"index.php\">X</a>
-			<div class=\"MovDetailsDiv\"><img class=\"detailsCov\" src=\"images/{$row['movies_cover']}\" alt=\"{$row['movies_title']}\">
+			<div class=\"MovDetailsDiv\">
+			<video class=\"detailsMov\" src=\"videos/{$row['movies_trailer']}\" autoplay controls></video>
 			<h2>{$row['movies_title']}</h2>
 			<p>Release: {$row['movies_year']}</p>
 			<p>Duration: {$row['movies_duration']}</p>
